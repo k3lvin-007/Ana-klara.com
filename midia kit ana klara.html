@@ -1,0 +1,1035 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mídia Kit | Ana Clara</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --purple: #8d75ad;
+  --dark: #463653;
+  --pale: #eee5f5;
+  --background: #f8f5fa;
+  --white: #ffffff;
+  --border: #e7dced;
+  --text: #51445d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(100% - 40px, 1040px);
+  margin: auto;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 21px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--dark);
+  color: white;
+}
+
+.btn-light {
+  background: var(--pale);
+  color: var(--dark);
+  border: 1px solid var(--border);
+}
+
+/* APRESENTAÇÃO */
+
+.hero {
+  text-align: center;
+  padding: 62px 25px 70px;
+  border-radius: 0 0 28px 28px;
+  background: linear-gradient(135deg, #eee5f5, #faf7fc);
+  margin-bottom: 36px;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(54px, 8vw, 82px);
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 0 20px;
+  color: var(--dark);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #78658d;
+}
+
+/* SEÇÕES */
+
+section {
+  margin-bottom: 38px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0 0 17px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 21px;
+  padding: 27px;
+}
+
+.bio {
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* MÉTRICAS */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.metric {
+  text-align: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 19px;
+  padding: 23px 12px;
+}
+
+.metric strong {
+  display: block;
+  color: var(--purple);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.metric span {
+  font-size: 13px;
+  color: #796d82;
+}
+
+/* NICHOS E AUDIÊNCIA */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: var(--pale);
+  color: var(--dark);
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-size: 14px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.info-box {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 19px;
+  padding: 22px;
+}
+
+.info-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  margin: 0 0 12px;
+  color: var(--dark);
+}
+
+.info-box p {
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* COMBOS */
+
+.combos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.combo {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.combo h3 {
+  color: var(--dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px;
+  margin: 0 0 10px;
+}
+
+.combo p {
+  line-height: 1.7;
+  font-size: 14px;
+  flex: 1;
+  white-space: pre-line;
+}
+
+.combo-price {
+  color: var(--purple);
+  font-weight: 700;
+  margin: 10px 0 17px;
+}
+
+.combo button {
+  width: 100%;
+}
+
+/* CONTATO */
+
+.contact {
+  text-align: center;
+  background: linear-gradient(135deg, #eee5f5, #faf7fc);
+  border-radius: 24px;
+  padding: 35px 20px;
+}
+
+.contact h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  color: var(--dark);
+  margin: 0 0 10px;
+}
+
+.contact p {
+  line-height: 1.7;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: #998ba3;
+  font-size: 12px;
+}
+
+/* MODAIS */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(35, 25, 42, .58);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  width: min(100%, 480px);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 22px;
+  padding: 27px;
+  box-shadow: 0 15px 50px rgba(0,0,0,.15);
+}
+
+.modal-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--dark);
+  font-size: 30px;
+  margin: 0 0 18px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: var(--dark);
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #fdfbfe;
+  color: var(--text);
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--purple);
+}
+
+.field textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  flex: 1;
+}
+
+/* ADMINISTRAÇÃO */
+
+.admin-content {
+  width: min(100%, 760px);
+}
+
+.admin-section {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.admin-section h3 {
+  color: var(--dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  margin: 0 0 15px;
+}
+
+.admin-combo {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.admin-combo strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.admin-combo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.small-btn {
+  border: 0;
+  padding: 9px 13px;
+  border-radius: 20px;
+  background: var(--pale);
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delete-btn {
+  background: #f9e8eb;
+  color: #a33e51;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media(max-width: 650px) {
+  .container {
+    width: min(100% - 28px, 1040px);
+  }
+
+  .topbar {
+    padding: 14px 0;
+  }
+
+  .topbar .btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 57px 20px 60px;
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: 59px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .panel {
+    padding: 21px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric {
+    padding: 17px;
+  }
+
+  .metric strong {
+    font-size: 33px;
+  }
+
+  .info-grid,
+  .combos {
+    grid-template-columns: 1fr;
+  }
+
+  .contact h2 {
+    font-size: 31px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .topbar,
+  .no-print,
+  .contact-actions button {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .hero, .contact {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  section, .combo, .metric, .info-box {
+    break-inside: avoid;
+  }
+
+  footer {
+    padding-bottom: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header class="topbar no-print">
+    <button class="btn btn-light" onclick="openLogin()">Área ADM</button>
+    <button class="btn btn-primary" onclick="window.print()">Salvar PDF</button>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <h1 id="viewName">Ana Clara</h1>
+      <p id="viewSubtitle">Compartilhando momentos, inspirações e experiências através das redes sociais.</p>
+    </div>
+
+    <section>
+      <h2 class="section-title">Sobre mim</h2>
+      <div class="panel">
+        <p class="bio" id="viewBio">Sou Ana Clara, criadora de conteúdo. Meu objetivo é compartilhar experiências, criar conexões verdadeiras com meu público e apresentar marcas de forma natural, criativa e autêntica.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Meu alcance</h2>
+      <div class="metrics">
+        <div class="metric">
+          <strong id="viewFollowers">10 mil</strong>
+          <span>Seguidores</span>
+        </div>
+        <div class="metric">
+          <strong id="viewReach">—</strong>
+          <span>Alcance médio</span>
+        </div>
+        <div class="metric">
+          <strong id="viewEngagement">—</strong>
+          <span>Engajamento</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Meus nichos</h2>
+      <div class="panel">
+        <div class="tags" id="viewNiches">
+          <span class="tag">Lifestyle</span>
+          <span class="tag">Beleza</span>
+          <span class="tag">Moda</span>
+          <span class="tag">Dia a dia</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Minha audiência</h2>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Faixa etária</h3>
+          <p id="viewAge">Informações disponíveis mediante solicitação.</p>
+        </div>
+        <div class="info-box">
+          <h3>Localização</h3>
+          <p id="viewLocation">Brasil</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Conheça meus combos</h2>
+      <div class="combos" id="viewCombos"></div>
+    </section>
+
+    <section class="contact">
+      <h2>Vamos trabalhar juntas?</h2>
+      <p>Será um prazer criar conteúdos especiais para sua marca.</p>
+      <div class="contact-actions">
+        <button class="btn btn-primary" onclick="openInstagram()">Instagram</button>
+        <button class="btn btn-light" onclick="openWhatsApp()">WhatsApp</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Produzido por KF Studios
+  </footer>
+
+</div>
+
+<!-- LOGIN ADM -->
+
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <h2>Acesso administrativo</h2>
+    <div class="field">
+      <label>Senha de acesso</label>
+      <input type="password" id="adminPassword" placeholder="Digite sua senha">
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="login()">Entrar</button>
+      <button class="btn btn-light" onclick="closeModal('loginModal')">Cancelar</button>
+    </div>
+    <p id="loginError" style="color:#b33b51;font-size:13px"></p>
+  </div>
+</div>
+
+<!-- PAINEL ADMINISTRATIVO -->
+
+<div class="modal" id="adminModal">
+  <div class="modal-content admin-content">
+    <h2>Painel administrativo</h2>
+
+    <div class="admin-section">
+      <h3>Informações do perfil</h3>
+
+      <div class="field">
+        <label>Nome</label>
+        <input id="editName">
+      </div>
+
+      <div class="field">
+        <label>Frase de apresentação</label>
+        <textarea id="editSubtitle"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Sobre mim</label>
+        <textarea id="editBio"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Seguidores</label>
+        <input id="editFollowers">
+      </div>
+
+      <div class="field">
+        <label>Alcance médio</label>
+        <input id="editReach">
+      </div>
+
+      <div class="field">
+        <label>Engajamento</label>
+        <input id="editEngagement">
+      </div>
+
+      <div class="field">
+        <label>Nichos (separe por vírgula)</label>
+        <input id="editNiches">
+      </div>
+
+      <div class="field">
+        <label>Faixa etária da audiência</label>
+        <input id="editAge">
+      </div>
+
+      <div class="field">
+        <label>Localização da audiência</label>
+        <input id="editLocation">
+      </div>
+
+      <div class="field">
+        <label>Link do Instagram</label>
+        <input id="editInstagram" placeholder="https://instagram.com/...">
+      </div>
+
+      <div class="field">
+        <label>Número do WhatsApp com DDD</label>
+        <input id="editWhatsApp" placeholder="5583999999999">
+      </div>
+
+      <button class="btn btn-primary" onclick="saveProfile()">Salvar informações</button>
+    </div>
+
+    <div class="admin-section">
+      <h3>Gerenciar combos</h3>
+      <div id="adminCombos"></div>
+      <button class="btn btn-primary" onclick="newCombo()">+ Adicionar combo</button>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-light" onclick="closeModal('adminModal')">Fechar painel</button>
+    </div>
+  </div>
+</div>
+
+<!-- EDITAR COMBO -->
+
+<div class="modal" id="comboModal">
+  <div class="modal-content">
+    <h2 id="comboModalTitle">Editar combo</h2>
+
+    <div class="field">
+      <label>Nome do combo</label>
+      <input id="comboName">
+    </div>
+
+    <div class="field">
+      <label>Descrição</label>
+      <textarea id="comboDescription"></textarea>
+    </div>
+
+    <div class="field">
+      <label>Preço</label>
+      <input id="comboPrice" placeholder="Ex.: R$ 150,00 ou Sob consulta">
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveCombo()">Salvar combo</button>
+      <button class="btn btn-light" onclick="closeModal('comboModal')">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const PASSWORD = "0707";
+
+const defaultProfile = {
+  name: "Ana Clara",
+  subtitle: "Compartilhando momentos, inspirações e experiências através das redes sociais.",
+  bio: "Sou Ana Clara, criadora de conteúdo. Meu objetivo é compartilhar experiências, criar conexões verdadeiras com meu público e apresentar marcas de forma natural, criativa e autêntica.",
+  followers: "10 mil",
+  reach: "—",
+  engagement: "—",
+  niches: ["Lifestyle", "Beleza", "Moda", "Dia a dia"],
+  age: "Informações disponíveis mediante solicitação.",
+  location: "Brasil",
+  instagram: "",
+  whatsapp: ""
+};
+
+const defaultCombos = [
+  {
+    name: "Stories Essencial",
+    description: "3 Stories em sequência para apresentar sua marca, produto ou serviço ao público.",
+    price: "Sob consulta"
+  },
+  {
+    name: "Stories em Destaque",
+    description: "5 Stories com apresentação, demonstração e chamada para ação.",
+    price: "Sob consulta"
+  },
+  {
+    name: "Reels + Stories",
+    description: "1 Reels criativo + 3 Stories para ampliar a divulgação da sua marca.",
+    price: "Sob consulta"
+  },
+  {
+    name: "Presença Premium",
+    description: "1 Reels + 5 Stories + divulgação integrada para uma apresentação mais completa.",
+    price: "Sob consulta"
+  }
+];
+
+function clone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function loadData(key, fallback) {
+  try {
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : clone(fallback);
+  } catch (error) {
+    return clone(fallback);
+  }
+}
+
+let profile = loadData("anaClaraProfile", defaultProfile);
+let combos = loadData("anaClaraCombos", defaultCombos);
+let editingComboIndex = null;
+
+function saveStorage() {
+  try {
+    localStorage.setItem("anaClaraProfile", JSON.stringify(profile));
+    localStorage.setItem("anaClaraCombos", JSON.stringify(combos));
+  } catch (error) {
+    alert("Não foi possível salvar os dados neste navegador.");
+  }
+}
+
+function renderProfile() {
+  document.getElementById("viewName").textContent = profile.name;
+  document.getElementById("viewSubtitle").textContent = profile.subtitle;
+  document.getElementById("viewBio").textContent = profile.bio;
+  document.getElementById("viewFollowers").textContent = profile.followers;
+  document.getElementById("viewReach").textContent = profile.reach;
+  document.getElementById("viewEngagement").textContent = profile.engagement;
+  document.getElementById("viewAge").textContent = profile.age;
+  document.getElementById("viewLocation").textContent = profile.location;
+
+  const niches = document.getElementById("viewNiches");
+  niches.replaceChildren();
+
+  profile.niches.forEach(niche => {
+    const span = document.createElement("span");
+    span.className = "tag";
+    span.textContent = niche.trim();
+    niches.appendChild(span);
+  });
+}
+
+function renderCombos() {
+  const container = document.getElementById("viewCombos");
+  container.replaceChildren();
+
+  combos.forEach((combo, index) => {
+    const card = document.createElement("div");
+    card.className = "combo";
+
+    const title = document.createElement("h3");
+    title.textContent = combo.name;
+
+    const description = document.createElement("p");
+    description.textContent = combo.description;
+
+    const price = document.createElement("div");
+    price.className = "combo-price";
+    price.textContent = combo.price;
+
+    const button = document.createElement("button");
+    button.className = "btn btn-primary";
+    button.textContent = "Tenho interesse";
+    button.onclick = () => contactCombo(index);
+
+    card.append(title, description, price, button);
+    container.appendChild(card);
+  });
+}
+
+function renderAdminCombos() {
+  const container = document.getElementById("adminCombos");
+  container.replaceChildren();
+
+  combos.forEach((combo, index) => {
+    const card = document.createElement("div");
+    card.className = "admin-combo";
+
+    const title = document.createElement("strong");
+    title.textContent = combo.name;
+
+    const actions = document.createElement("div");
+    actions.className = "admin-combo-actions";
+
+    const edit = document.createElement("button");
+    edit.className = "small-btn";
+    edit.textContent = "Editar";
+    edit.onclick = () => editCombo(index);
+
+    const remove = document.createElement("button");
+    remove.className = "small-btn delete-btn";
+    remove.textContent = "Excluir";
+    remove.onclick = () => deleteCombo(index);
+
+    actions.append(edit, remove);
+    card.append(title, actions);
+    container.appendChild(card);
+  });
+}
+
+function renderAll() {
+  renderProfile();
+  renderCombos();
+  renderAdminCombos();
+}
+
+function openLogin() {
+  document.getElementById("adminPassword").value = "";
+  document.getElementById("loginError").textContent = "";
+  document.getElementById("loginModal").classList.add("show");
+}
+
+function login() {
+  const password = document.getElementById("adminPassword").value;
+
+  if (password !== PASSWORD) {
+    document.getElementById("loginError").textContent = "Senha incorreta. Tente novamente.";
+    return;
+  }
+
+  closeModal("loginModal");
+  openAdmin();
+}
+
+document.getElementById("adminPassword").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") login();
+});
+
+function openAdmin() {
+  document.getElementById("editName").value = profile.name;
+  document.getElementById("editSubtitle").value = profile.subtitle;
+  document.getElementById("editBio").value = profile.bio;
+  document.getElementById("editFollowers").value = profile.followers;
+  document.getElementById("editReach").value = profile.reach;
+  document.getElementById("editEngagement").value = profile.engagement;
+  document.getElementById("editNiches").value = profile.niches.join(", ");
+  document.getElementById("editAge").value = profile.age;
+  document.getElementById("editLocation").value = profile.location;
+  document.getElementById("editInstagram").value = profile.instagram;
+  document.getElementById("editWhatsApp").value = profile.whatsapp;
+
+  renderAdminCombos();
+  document.getElementById("adminModal").classList.add("show");
+}
+
+function saveProfile() {
+  profile = {
+    name: document.getElementById("editName").value.trim() || "Ana Clara",
+    subtitle: document.getElementById("editSubtitle").value.trim(),
+    bio: document.getElementById("editBio").value.trim(),
+    followers: document.getElementById("editFollowers").value.trim() || "—",
+    reach: document.getElementById("editReach").value.trim() || "—",
+    engagement: document.getElementById("editEngagement").value.trim() || "—",
+    niches: document.getElementById("editNiches").value.split(",").map(x => x.trim()).filter(Boolean),
+    age: document.getElementById("editAge").value.trim(),
+    location: document.getElementById("editLocation").value.trim(),
+    instagram: document.getElementById("editInstagram").value.trim(),
+    whatsapp: document.getElementById("editWhatsApp").value.trim()
+  };
+
+  saveStorage();
+  renderAll();
+  alert("Informações atualizadas com sucesso!");
+}
+
+function newCombo() {
+  editingComboIndex = null;
+  document.getElementById("comboModalTitle").textContent = "Adicionar combo";
+  document.getElementById("comboName").value = "";
+  document.getElementById("comboDescription").value = "";
+  document.getElementById("comboPrice").value = "Sob consulta";
+  document.getElementById("comboModal").classList.add("show");
+}
+
+function editCombo(index) {
+  editingComboIndex = index;
+  const combo = combos[index];
+
+  document.getElementById("comboModalTitle").textContent = "Editar combo";
+  document.getElementById("comboName").value = combo.name;
+  document.getElementById("comboDescription").value = combo.description;
+  document.getElementById("comboPrice").value = combo.price;
+  document.getElementById("comboModal").classList.add("show");
+}
+
+function saveCombo() {
+  const name = document.getElementById("comboName").value.trim();
+  const description = document.getElementById("comboDescription").value.trim();
+  const price = document.getElementById("comboPrice").value.trim();
+
+  if (!name || !description || !price) {
+    alert("Preencha todos os campos do combo.");
+    return;
+  }
+
+  const combo = { name, description, price };
+
+  if (editingComboIndex === null) {
+    combos.push(combo);
+  } else {
+    combos[editingComboIndex] = combo;
+  }
+
+  saveStorage();
+  renderAll();
+  closeModal("comboModal");
+  alert("Combo salvo com sucesso!");
+}
+
+function deleteCombo(index) {
+  if (!confirm("Tem certeza de que deseja excluir este combo?")) return;
+
+  combos.splice(index, 1);
+  saveStorage();
+  renderAll();
+}
+
+function contactCombo(index) {
+  const combo = combos[index];
+  const message = "Olá! Tenho interesse no combo " + combo.name + " do mídia kit da Ana Clara.";
+  const number = profile.whatsapp.replace(/\D/g, "");
+
+  if (number) {
+    window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
+  } else if (profile.instagram) {
+    window.open(profile.instagram, "_blank");
+  } else {
+    alert("Entre em contato para consultar este combo.");
+  }
+}
+
+function openInstagram() {
+  if (profile.instagram) {
+    window.open(profile.instagram, "_blank");
+  } else {
+    alert("O link do Instagram ainda não foi cadastrado na Área ADM.");
+  }
+}
+
+function openWhatsApp() {
+  const number = profile.whatsapp.replace(/\D/g, "");
+
+  if (number) {
+    window.open("https://wa.me/" + number, "_blank");
+  } else {
+    alert("O WhatsApp ainda não foi cadastrado na Área ADM.");
+  }
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove("show");
+}
+
+document.querySelectorAll(".modal").forEach(modal => {
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
+});
+
+renderAll();
+</script>
+
+</body>
+</html>
